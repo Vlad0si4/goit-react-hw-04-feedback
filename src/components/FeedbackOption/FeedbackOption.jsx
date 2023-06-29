@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 export const FeedbackOption = ({ option, feedback }) => {
   return (
     <ul>
-      {option.map(key => {
+      {option.map((key, idx) => {
         return (
-          <li key={key}>
+          <li key={idx}>
             <button type="button " onClick={() => feedback(key)}>
               {key}
             </button>

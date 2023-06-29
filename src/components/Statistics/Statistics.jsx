@@ -7,7 +7,7 @@ export const Statistics = ({
 }) => {
   return (
     <ul>
-      {option.map(([key, value]) => {
+      {Object.entries(option).map(([key, value]) => {
         return (
           <li key={key}>
             {key}: {value}
