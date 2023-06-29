@@ -10,21 +10,12 @@ export const App = () => {
   const [bad, setBad] = useState(0);
 
   const feedback = key => {
-    switch (key) {
-      case 'good':
-        setGood(prev => prev + 1);
-        break;
-
-      case 'neutral':
-        setNeutral(prev => prev + 1);
-        break;
-
-      case 'bad':
-        setBad(prev => prev + 1);
-        break;
-
-      default:
-        return;
+    if (key === 'good') {
+      setGood(prev => prev + 1);
+    } else if (key === 'neutral') {
+      setNeutral(prev => prev + 1);
+    } else if (key === 'bad') {
+      setBad(prev => prev + 1);
     }
   };
 
